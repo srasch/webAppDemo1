@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -15,6 +17,9 @@ namespace WebApplication1.Controllers
 
         public ActionResult About()
         {
+            Console.WriteLine("Console");
+            Debug.WriteLine("Debug");
+            Trace.WriteLine("Trace");
             ViewBag.Message = "Your application description page. WOHOOO!";
 
             return View();
